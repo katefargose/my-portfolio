@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my personal portfolio website. Explore my work, interests, and achievements.">
+    <meta name="keywords" content="portfolio, web developer, personal website, creative">
+    <title>Home - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Kate Fargose</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title fade-in">Hi, I'm <span class="highlight">Kate Fargose</span></h1>
+                <p class="hero-subtitle fade-in-delay">Web Developer & Creative Designer</p>
+                <p class="hero-description fade-in-delay-2">
+                    Welcome to my personal portfolio! I turn raw data into meaningful insights, and create
+                    data-driven solutions that solve real problems. I'm passionate about analytics, machine learning, and crafting
+                    intelligent systems. Dive in to explore my projects and get to know my work better.
+                </p>
+                <div class="hero-buttons fade-in-delay-3">
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image">
+                    <img src="images/kate-profile.jpg" alt="Kate Fargose" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Quick Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h2 class="section-title">Welcome to My World</h2>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL & Database</h3>
+                    <p>Designing and managing efficient database systems and writing optimized queries for data retrieval and analysis.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>Transforming raw data into clear insights using Python, pandas, and statistical methods</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Data Handling</h3>
+                    <p>Cleaning, organizing, and exploring datasets using Python and beginner-friendly tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Preview -->
+    <section class="skills-preview">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Qualifications -->
+    <section class="intro-section">
+        <div class="container">
+            <h2 class="section-title">Academic Qualifications</h2>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>School</h3>
+                    <p>Holy Cross Convent School</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>HSC (11th & 12th)</h3>
+                    <p>A.V College, Vasai</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Current College</h3>
+                    <p>Fr. Conceicao Rodrigues Institute of Technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kate Fargose. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

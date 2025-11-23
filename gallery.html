@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A glimpse into my world through pictures—nature, food, animals, and moments that tell my story.">
+    <title>Gallery - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Kate Fargose</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero with Introduction -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-intro">
+                <h1 class="gallery-main-title">Gallery</h1>
+                <p class="gallery-intro-text">
+                    A glimpse into my world through pictures—nature, food, and moments that tell my story.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid - Scrolling Style -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Images appear as you scroll down -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="gallery/WhatsApp Image 2025-11-23 at 15.12.15.jpeg" alt="Gallery Image 1" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Gallery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="gallery/WhatsApp Image 2025-11-23 at 15.08.08.jpeg" alt="Gallery Image 2" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Gallery</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="gallery/WhatsApp Image 2025-11-23 at 15.08.29.jpeg" alt="Gallery Image 3" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Gallery</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="gallery/WhatsApp Image 2025-11-23 at 15.10.01.jpeg" alt="Gallery Image 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Gallery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="gallery/WhatsApp Image 2025-11-23 at 15.08.07.jpeg" alt="Gallery Image 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Gallery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="gallery/WhatsApp Image 2025-11-23 at 15.13.50.jpeg" alt="Gallery Image 6" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Gallery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <img id="modalImage" src="" alt="Modal Image">
+            <div class="modal-info">
+                <div class="modal-category" id="modalCategory"></div>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kate Fargose. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

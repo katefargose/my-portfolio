@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about me - my background, interests, and hobbies.">
+    <title>About Me - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Kate Fargose</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">About Me</h1>
+            <p class="page-subtitle">Get to know me better</p>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/kate-profile.jpg" alt="Kate Fargose" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">My Story</h2>
+                    <p>
+                        I am <strong>Kate Fargose</strong>, an aspiring data scientist and analytics professional based in Mumbai. I am dedicated to transforming raw data into meaningful insights that drive informed decision-making and strategic outcomes.
+                    </p>
+                    <p>
+                        Currently pursuing my Bachelor of Technology in Computer Engineering at Fr. Conceicao Rodrigues College of Engineering, Bandra. I specialize in leveraging Python, SQL, and advanced analytics techniques to address complex challenges and develop data-driven solutions.
+                    </p>
+                    <p>
+                        My approach emphasizes writing clean, efficient code and developing scalable solutions that enhance data accessibility and comprehension. Through data analysis, visualization, and predictive modeling, I excel at distilling complex datasets into clear, actionable intelligence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests & Hobbies -->
+    <section class="interests-section">
+        <div class="container">
+            <h2 class="section-title">Interests & Hobbies</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Capturing moments and telling stories through the lens.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Reading</h3>
+                    <p>Avid reader of fiction and non-fiction novels. Always learning something new.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Coding</h3>
+                    <p>Exploring new programming languages and technologies. Building projects that solve real-world problems and expand my technical expertise.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music</h3>
+                    <p>Listening to Music of various genres. Music fuels my creativity and helps me focus.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Traveling</h3>
+                    <p>Exploring new places, cultures, and experiences around the world. Traveling broadens my perspective and inspires creativity.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <h3>Journaling</h3>
+                    <p>Reflecting on experiences and documenting thoughts. Journaling helps me organize my ideas and track personal growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kate Fargose. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
