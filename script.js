@@ -167,150 +167,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form validation
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form fields
-            const name = document.getElementById('name');
-            const email = document.getElementById('email');
-            const subject = document.getElementById('subject');
-            const message = document.getElementById('message');
-
-            // Get error message elements
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const subjectError = document.getElementById('subjectError');
-            const messageError = document.getElementById('messageError');
-            const successMessage = document.getElementById('formSuccess');
-
-            // Reset previous errors
-            [nameError, emailError, subjectError, messageError].forEach(el => {
-                if (el) el.textContent = '';
-            });
-            if (successMessage) {
-                successMessage.classList.remove('show');
-                successMessage.textContent = '';
-            }
-
-            let isValid = true;
-
-            // Validate name
-            if (!name.value.trim()) {
-                if (nameError) nameError.textContent = 'Name is required';
-                isValid = false;
-            } else if (name.value.trim().length < 2) {
-                if (nameError) nameError.textContent = 'Name must be at least 2 characters';
-                isValid = false;
-            }
-
-            // Validate email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value.trim()) {
-                if (emailError) emailError.textContent = 'Email is required';
-                isValid = false;
-            } else if (!emailRegex.test(email.value)) {
-                if (emailError) emailError.textContent = 'Please enter a valid email address';
-                isValid = false;
-            }
-
-            // Validate subject
-            if (!subject.value.trim()) {
-                if (subjectError) subjectError.textContent = 'Subject is required';
-                isValid = false;
-            } else if (subject.value.trim().length < 3) {
-                if (subjectError) subjectError.textContent = 'Subject must be at least 3 characters';
-                isValid = false;
-            }
-
-            // Validate message
-            if (!message.value.trim()) {
-                if (messageError) messageError.textContent = 'Message is required';
-                isValid = false;
-            } else if (message.value.trim().length < 10) {
-                if (messageError) messageError.textContent = 'Message must be at least 10 characters';
-                isValid = false;
-            }
-
-            // If form is valid, show success message
-            if (isValid) {
-                if (successMessage) {
-                    successMessage.textContent = 'Thank you! Your message has been sent successfully. I will get back to you soon.';
-                    successMessage.classList.add('show');
-                }
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } else {
-                // Scroll to first error
-                const firstError = [nameError, emailError, subjectError, messageError].find(el => el && el.textContent);
-                if (firstError) {
-                    firstError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-            }
-        });
-
-        // Real-time validation
-        const formInputs = contactForm.querySelectorAll('input, textarea');
-        formInputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                validateField(this);
-            });
-
-            input.addEventListener('input', function() {
-                const errorElement = document.getElementById(this.id + 'Error');
-                if (errorElement && errorElement.textContent) {
-                    validateField(this);
-                }
-            });
-        });
-
-        function validateField(field) {
-            const errorElement = document.getElementById(field.id + 'Error');
-            if (!errorElement) return;
-
-            let errorMessage = '';
-
-            switch(field.id) {
-                case 'name':
-                    if (!field.value.trim()) {
-                        errorMessage = 'Name is required';
-                    } else if (field.value.trim().length < 2) {
-                        errorMessage = 'Name must be at least 2 characters';
-                    }
-                    break;
-                case 'email':
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!field.value.trim()) {
-                        errorMessage = 'Email is required';
-                    } else if (!emailRegex.test(field.value)) {
-                        errorMessage = 'Please enter a valid email address';
-                    }
-                    break;
-                case 'subject':
-                    if (!field.value.trim()) {
-                        errorMessage = 'Subject is required';
-                    } else if (field.value.trim().length < 3) {
-                        errorMessage = 'Subject must be at least 3 characters';
-                    }
-                    break;
-                case 'message':
-                    if (!field.value.trim()) {
-                        errorMessage = 'Message is required';
-                    } else if (field.value.trim().length < 10) {
-                        errorMessage = 'Message must be at least 10 characters';
-                    }
-                    break;
-            }
-
-            errorElement.textContent = errorMessage;
-        }
-    }
+    // --- REMOVE native JS submit for Formspree ---
+    // const contactForm = document.getElementById('contactForm');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
+    //         // ...old validation/message code...
+    //     });
+    //     // ...old real-time validation...
+    // }
 
     // Intersection Observer for fade-in animations
     const observerOptions = {
@@ -345,6 +210,36 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
         });
+    });
+
+    // --- Interests interactive expansion ---
+    const interestCards = document.querySelectorAll('.interest-card');
+    interestCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Remove .active from all others
+            interestCards.forEach(c => {
+                if (c !== card) c.classList.remove('active');
+            });
+            this.classList.toggle('active');
+        });
+    });
+    // Collapse when clicking outside
+    document.addEventListener('click', function(e) {
+        interestCards.forEach(card => card.classList.remove('active'));
+    });
+
+    // --- About Interests & Hobbies click effect ---
+    const aboutInterests = document.querySelectorAll('.interests-section .interest-card');
+    aboutInterests.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.stopPropagation();
+            aboutInterests.forEach(c => { if (c !== card) c.classList.remove('active'); });
+            card.classList.toggle('active');
+        });
+    });
+    document.addEventListener('click', function() {
+        aboutInterests.forEach(card => card.classList.remove('active'));
     });
 });
 
